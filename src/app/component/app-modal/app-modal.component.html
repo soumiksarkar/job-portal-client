@@ -1,0 +1,36 @@
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Job Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="lead">
+          {{jobInfo.jobTitle}}
+        </p>
+        <h6>Job Description</h6>
+        <small>{{jobInfo.jobDesc}}</small>
+
+        <h6 class="mt-2">Organisation</h6>
+        <small>{{jobInfo.org}}</small>
+
+        <h6 class="mt-2">Required Experience</h6>
+        <small>{{jobInfo.reqExp}}</small>
+
+        <h6 class="mt-2">Skills</h6>
+        <small>{{jobInfo.skills}}</small>
+
+        <h6 class="mt-2">Salary</h6>
+        <small>{{jobInfo.salary}}</small>
+
+        <h6 class="mt-2">Contact Info</h6>
+        <small>Recruiter Email : {{jobInfo.email}}</small>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

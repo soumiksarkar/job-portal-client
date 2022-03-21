@@ -1,0 +1,38 @@
+<div class="container">
+  <div id="loginWrnCredsAlertPlchldr" class="mt-3"></div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <!-- <div class="text-center"> -->
+          <div class="text-center">
+            <div style="margin-bottom: 20px;" class="d-flex">
+              <h5>Login As : </h5>
+              <div style="margin-left: 20px; padding-top: 1px;">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" [value]="'freelancer'" [checked] = "selected == 'freelancer'" [(ngModel)]="selected">
+                  <label class="form-check-label" for="inlineRadio1">Freelancer</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" [value]="'employer'" [checked] = "selected == 'employer'" [(ngModel)]="selected">
+                  <label class="form-check-label" for="inlineRadio1">Employer</label>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          <form [formGroup] = "loginForm" (ngSubmit)="onLogin()">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <button type="submit" class="btn btn-primary" >Login</button>
+          </form>
+        <!-- </div> -->
+      </div>
+    </div>
+  </div>
+  

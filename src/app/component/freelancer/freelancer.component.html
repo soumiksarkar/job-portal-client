@@ -1,0 +1,12 @@
+<nav class="navbar fixed-top navbar-light bg-primary">
+  <div class="container-fluid">
+    <h1 style="color:aliceblue;">Welcome</h1>
+    <div class="d-flex">
+      <button class="btn bg-light nav-btn" (click)="showDashboard()">Dashboard</button>
+      <button class="btn bg-light nav-btn" (click)="showApplications()">My Applications</button>
+      <button class="btn bg-light nav-btn" (click)="showProfile()">My Profile</button>
+      <button class="btn bg-light nav-btn" (click)="onLogout()">Logout</button>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>

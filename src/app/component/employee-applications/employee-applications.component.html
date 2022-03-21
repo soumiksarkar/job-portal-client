@@ -1,0 +1,121 @@
+<!-- Modal -->
+<div class="modal fade" id="applcntPrflMdl" tabindex="-1" aria-labelledby="applcntPrflMdlLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="applcntPrflMdlLabel">Applicant Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="lead">
+          Soumik Sarkar
+        </p>
+        <h6>Candidate Bio</h6>
+        <small>Current job description. Current job description. Current job description. Current job
+          description. Current job description. Current job description. Current job description. 
+        </small>
+        <div class="profile-details mt-2">
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="profsnl-tab" data-bs-toggle="tab" data-bs-target="#profsnl" type="button"
+                role="tab" aria-controls="profsnl" aria-selected="true">Professional Info</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="prsnl-tab" data-bs-toggle="tab" data-bs-target="#prsnl" type="button"
+                role="tab" aria-controls="prsnl" aria-selected="false">Personal Info</button>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="profsnl" role="tabpanel" aria-labelledby="profsnl-tab">
+              <table class="table table-light table-striped">
+                <tbody>
+                  <tr>
+                    <td>Organisation</td>
+                    <td>Visa Inc</td>
+                  </tr>
+                  <tr>
+                    <td>Designation</td>
+                    <td>Senior Software Engineer</td>
+                  </tr>
+                  <tr>
+                    <td>Work Experience</td>
+                    <td>9 years</td>
+                  </tr>
+                  <tr>
+                    <td>Primary Skills</td>
+                    <td>Java, Angular</td>
+                  </tr>
+                  <tr>
+                    <td>Education</td>
+                    <td>B.Tech</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tab-pane fade" id="prsnl" role="tabpanel" aria-labelledby="prsnl-tab">
+              <table class="table table-light table-striped">
+                <tbody>
+                  <tr>
+                    <td>Name</td>
+                    <td>Soumik Sarkar</td>
+                  </tr>
+                  <tr>
+                    <td>Email</td>
+                    <td>soumiksarkar90@outlook.com</td>
+                  </tr>
+                  <tr>
+                    <td>Contact Number</td>
+                    <td>+91-9836059005</td>
+                  </tr>
+                  <tr>
+                    <td>Current City</td>
+                    <td>Bangalore, IN</td>
+                  </tr>
+                  <tr>
+                    <td>Hobbies</td>
+                    <td>Photography, Music</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid nav-top-mrgn">
+  <div class="row justify-content-center">
+    <div class="jobs-posted col-md-10">
+      <div class="jobs-title text-center">
+        <h2 style="margin-top: 10px; margin-bottom: 10px;">Candidates Applied For The Job</h2>
+      </div>
+      <div class="d-grid gap-3">
+        <div class="card w-100">
+          <div class="card-body">
+            <div class="d-flex">
+              <h5 class="card-title">Software Developer III</h5>
+              <p class="fst-normal ms-2" style="padding-top: 1px;">Work Experience 9 years</p>
+            </div>
+            <h6 class="card-text">Candidate Bio</h6>
+            <p class="text-truncate card-text">With supporting text below as a natural lead-in to additional content.
+              With supporting text below as a natural lead-in to additional content.
+              With supporting text below as a natural lead-in to additional content.
+              With supporting text below as a natural lead-in to additional content.
+              With supporting text below as a natural lead-in to additional content.
+              With supporting text below as a natural lead-in to additional content.
+              With supporting text below as a natural lead-in to additional content.
+            </p>
+            <button type="button" class="btn btn-primary position-relative" (click)="showApplicantProfile()">
+              Applicant Profile
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

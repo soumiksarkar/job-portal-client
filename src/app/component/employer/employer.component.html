@@ -1,0 +1,61 @@
+<!-- Modal -->
+<div class="modal fade" id="newJobModal" tabindex="-1" aria-labelledby="newJobModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="newJobModalLabel">Post New Job</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup] = "newJobForm" (ngSubmit)="onPostClick()">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Job Title</label>
+            <input formControlName="jobTitle" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Required Experience</label>
+            <input formControlName="exp" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Skills Required</label>
+            <select formControlName="skills" class="form-select filter-mltislct" multiple aria-label="multiple select example">
+              <option selected>All</option>
+              <option value="1">Java</option>
+              <option value="2">HTML</option>
+              <option value="3">Angular</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Job Description</label>
+            <textarea formControlName="jobDesc" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" >Post</button>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar fixed-top navbar-light bg-primary">
+  <div class="container-fluid">
+    <h1 style="color:aliceblue;">Welcome</h1>
+    <div class="d-flex">
+      <button class="btn bg-light nav-btn" (click)="showDashboard()">Dashboard</button>
+      <button class="btn bg-light nav-btn" (click)="postNewJob()">Post New Job</button>
+      <button class="btn bg-light nav-btn" (click)="showEmployerProfile()">My Profile</button>
+      <button class="btn bg-light nav-btn" (click)="onLogout()">Logout</button>
+    </div>
+  </div>
+</nav>
+
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-body">
+      {{toastMessage}}
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

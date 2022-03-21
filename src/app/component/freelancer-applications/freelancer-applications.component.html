@@ -1,0 +1,17 @@
+<app-app-modal [jobInfo]="modalJobInfo"></app-app-modal>
+
+<div class="applctn-container nav-top-mrgn d-grid gap-3">
+  <div class="applctn-title">
+  </div>
+  <div class="card w-100" *ngFor="let item of jobList">
+    <div class="card-body">
+      <h5 class="card-title">{{item.jobTitle}} at {{item.org}}</h5>
+      <p class="card-text">{{item.jobDesc}}</p>
+      <div class="d-flex">
+        <button class="btn btn-primary" data-bs-toggle="modal"
+        data-bs-target="#exampleModal" (click)="showDetails(item.id)">View Details</button>
+        <small class="ms-3 pt-3">Applied on {{item.appliedOn.split("T")[0]}}</small>
+      </div>
+    </div>
+  </div>
+</div>

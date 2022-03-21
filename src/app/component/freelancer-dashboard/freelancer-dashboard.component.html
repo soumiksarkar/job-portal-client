@@ -1,0 +1,53 @@
+<app-app-modal [jobInfo]="modalJobInfo"></app-app-modal>
+
+<div class="dshbrd-container nav-top-mrgn container-fluid">
+  <div id="applySuccessAlert"></div>
+  <div class="row">
+    <div class="filters col-md-4">
+      <h2 class="title text-center">Filters</h2>
+      <form [formGroup]="filterForm" (ngSubmit)="onFilterSubmit()">
+        <h4 class="skill-set">Skill Set</h4>
+        <select formControlName="skillSets" class="form-select filter-mltislct" multiple aria-label="multiple select example">
+          <option selected>All</option>
+          <option value="1">Java</option>
+          <option value="2">HTML</option>
+          <option value="3">Angular</option>
+        </select>
+        <h4 class="salary-per-hr">Salary Per Hour(USD)</h4>
+        <select formControlName="salary" class="form-select filter-mltislct" multiple aria-label="multiple select example">
+          <option selected>All</option>
+          <option value="1">0 - 100</option>
+          <option value="2">101 - 200</option>
+          <option value="3">more than 200</option>
+        </select>
+        <button style="margin-top: 20px;" type="submit" class="btn btn-primary">Apply Filters</button>
+      </form>
+    </div>
+
+    <div class="vr"></div>
+
+    <div class="jobs-list col-md-7">
+      <div class="jobs-title text-center">
+        <h2>{{totalJobs}} Jobs Posted</h2>
+      </div>
+      <div class="card w-100" *ngFor="let item of jobList">
+        <div class="card-body">
+          <h5 class="card-title">{{item.jobTitle}} at {{item.org}}</h5>
+          <p class="card-text">{{item.jobDesc}}</p>
+          <a class="btn btn-primary" (click)="onApply(item.id)">Apply</a>
+          <button style="margin-left: 30px;" class="btn btn-primary" (click)="showDetails(item.id)">View Details</button>
+          <small class="ms-3 pt-4">Posted on {{item.createdOn.split("T")[0]}}</small>
+          <small class="ms-3 pt-4">${{item.salary}}/hour</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+  <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-body">
+      {{toastMessage}}
+    </div>
+  </div>
+</div>
